@@ -7,7 +7,7 @@ TODO 🤞
   
 
 Installation
-  Node must be installed.
+  NodeJS must be installed.
 
    ```npm install```
 
