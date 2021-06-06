@@ -1,0 +1,23 @@
+{
+  "name": "passgen-js",
+  "version": "1.0.0",
+  "description": "A password generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hnccbits/passgen-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hnccbits/passgen-js/issues"
+  },
+  "homepage": "https://github.com/hnccbits/passgen-js#readme",
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}
