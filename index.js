@@ -28,4 +28,4 @@ var char1=Math.floor(Math.random()
 }
  console.log(passgenJs());
 
- module.exports = passgenJs
+ module.exports= passgenJs;
