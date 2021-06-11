@@ -5,6 +5,27 @@ const str = {
     numb:"1234567890",
     special:"!@#$%&",
 }
+function RandomInt(n){
+    return Math.floor(Math.random()*n);
+  }
+// Increasing randomness in password
+
+function shuffelPassword(s){
+      var arr=s.split('');
+      var n=arr.length;
+
+      for(var i=0;i<n-1;i++){
+        var j=RandomInt(n);
+
+        var temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+      }
+
+      s=arr.join('');
+      return s;
+    }
+
 function passgenJs() {
 
 var value='';
@@ -23,7 +44,8 @@ var char1=Math.floor(Math.random()
 * str.special.length);
  value += str.special.charAt(char4)
  }
- return(value);
+   var pass=shuffelPassword(value);
+   return pass;
 }
  console.log(passgenJs());
 
