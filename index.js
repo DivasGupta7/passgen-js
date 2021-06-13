@@ -9,7 +9,6 @@ function RandomInt(n){
     return Math.floor(Math.random()*n);
   }
 // Increasing randomness in password
-
 function shuffelPassword(s){
       var arr=s.split('');
       var n=arr.length;
@@ -26,10 +25,12 @@ function shuffelPassword(s){
       return s;
     }
 
-function passgenJs() {
-
+function passgenJs(len) {
 var value='';
-for(i=1;i<=2;i++){
+if(len%4==0)
+{
+// in each iteration we are accessing random element from all strings
+for(i=1;i<=len/4;i++){
 var char1=Math.floor(Math.random()
     * str.alphaC.length);
     // console.log(char1)
@@ -47,6 +48,22 @@ var char1=Math.floor(Math.random()
    var pass=shuffelPassword(value);
    return pass;
 }
- console.log(passgenJs());
+else{
+  console.log("Not valid input. Enter in multiple of 4.");
+}
+}
+// console.log(passgenJs());
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+// taking input from the user for the length of the password
+readline.question('Enter the Password length (multiple of 4 & greater than or equal to 8): ', length => {
+   var length=(`${length}`);
+  var pswd= passgenJs(length);
+  if(length%4==0)
+  console.log(pswd);
+  readline.close();
+});
 
- module.exports = passgenJs
+ module.exports= passgenJs;
